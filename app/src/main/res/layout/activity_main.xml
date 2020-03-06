@@ -6,13 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/g_h"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <Switch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:showText="true"
+        android:textColor="@android:color/black"
+        android:textColorHighlight="@android:color/white"
+        android:textOff="Tamil"
+        android:textOn="English"
+        android:thumb="@drawable/ic_language_toggle_thumb"
+        android:track="@drawable/ic_background_langauge"
+        app:layout_constraintBottom_toTopOf="@id/g_h"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnusedAttribute" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_background_langauge"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h">
+
+        <RadioButton
+            android:id="@+id/english"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/togglestate_left"
+            android:button="@null"
+            android:checked="true"
+            android:gravity="center"
+            android:text="English"
+            android:textColor="@color/togglecolor" />
+
+        <RadioButton
+            android:id="@+id/tamil"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/togglestate_right"
+            android:button="@null"
+            android:gravity="center"
+            android:text="Tamil"
+            android:textColor="@color/togglecolor" />
+    </RadioGroup>
+
+    <com.app.togglebutton.LanguageSwitch
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/g_h"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/g_h" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

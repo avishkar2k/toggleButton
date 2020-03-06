@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:background="@drawable/ic_background_langauge"
+    android:orientation="horizontal">
+
+    <CheckBox
+        android:id="@+id/english"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/togglestate_left"
+        android:button="@null"
+        android:checked="true"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="English"
+        android:textColor="@color/togglecolor" />
+
+    <CheckBox
+        android:id="@+id/tamil"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_weight="1"
+        android:background="@drawable/togglestate_right"
+        android:button="@null"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Tamil"
+        android:textColor="@color/togglecolor" />
+
+</LinearLayout>
